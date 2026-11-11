@@ -1,0 +1,66 @@
+<!-- avisa que e html5 -->
+<!DOCTYPE html>
+<!-- abre a pagina, em portugues do brasil -->
+<html lang="pt-BR">
+<!-- configuracoes, nao aparece na tela -->
+<head>
+    <!-- acentos funcionando -->
+    <meta charset="UTF-8">
+    <!-- ajuste pro celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- nome da aba -->
+    <title>Sobre</title>
+    <!-- puxa o css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- tudo que aparece na tela -->
+<body>
+
+    <!-- cabecalho com o mesmo menu -->
+    <header class="cabecalho">
+        <h1>Nome do site</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="form.html">Calcular dieta</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- conteudo principal, pagina que fala do site, do trabalho e de quem fez, o professor pede isso -->
+    <main class="container">
+        <!-- explica o que o site faz -->
+        <section class="secao">
+            <h2>Sobre o site</h2>
+            <p>Uma calculadora simples que estima as calorias diárias de uma pessoa a partir dos dados dela e do objetivo escolhido.</p>
+        </section>
+
+        <!-- explica de qual materia e o trabalho -->
+        <section class="secao">
+            <h2>Sobre o trabalho</h2>
+            <p>Trabalho Somativo 1 da disciplina de Fundamentos de Programação Web, do curso de Análise e Desenvolvimento de Sistemas da PUCPR.</p>
+            <p>Feito apenas com HTML, CSS e JavaScript, sem frameworks.</p>
+        </section>
+
+        <!-- quem fez o trabalho -->
+        <section class="secao">
+            <h2>Autores</h2>
+            <!-- lista sem numero com o nome de cada um, a classe lista e pro css -->
+            <ul class="lista">
+                <li>Pedro</li>
+                <li>Bryan</li>
+                <li>Murilo</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- rodape igual -->
+    <footer class="rodape">
+        <p>Trabalho de Programação Web — PUCPR</p>
+    </footer>
+
+    <!-- puxa o js -->
+    <script src="script.js"></script>
+</body>
+</html>

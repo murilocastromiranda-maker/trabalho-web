@@ -1,0 +1,65 @@
+<!-- avisa que e html5 -->
+<!DOCTYPE html>
+<!-- abre a pagina, em portugues do brasil -->
+<html lang="pt-BR">
+<!-- configuracoes, nao aparece na tela -->
+<head>
+    <!-- acentos funcionando -->
+    <meta charset="UTF-8">
+    <!-- ajuste pro celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- nome da aba -->
+    <title>Resultado</title>
+    <!-- puxa o css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- tudo que aparece na tela -->
+<body>
+
+    <!-- cabecalho com o mesmo menu de sempre -->
+    <header class="cabecalho">
+        <h1>Nome do site</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="form.html">Calcular dieta</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- essa pagina recebe os dados do form pela url, ela mesma nao tem dado nenhum escrito, quem preenche e o js -->
+    <main class="container">
+        <h2>Seu resultado</h2>
+
+        <!-- bloco que mostra de volta o que a pessoa digitou -->
+        <section class="secao">
+            <h3>Dados informados</h3>
+            <!-- div vazia, o id dadosRecebidos e pro js achar ela e colocar os dados dentro, a classe resultado e pro css -->
+            <div id="dadosRecebidos" class="resultado">
+                <!-- o JS preenche aqui com os dados que vieram do form -->
+            </div>
+        </section>
+
+        <!-- bloco que mostra a conta das calorias -->
+        <section class="secao">
+            <h3>Estimativa de calorias</h3>
+            <!-- outra div vazia, o js faz o calculo e joga o resultado aqui -->
+            <div id="resultado" class="resultado">
+                <!-- o JS mostra o cálculo aqui -->
+            </div>
+        </section>
+
+        <!-- link com cara de botao pra voltar pro form e fazer de novo -->
+        <a href="form.html" class="botao">Calcular de novo</a>
+    </main>
+
+    <!-- rodape igual -->
+    <footer class="rodape">
+        <p>Trabalho de Programação Web — PUCPR</p>
+    </footer>
+
+    <!-- puxa o js, aqui ele le a url, pega os dados e faz a conta -->
+    <script src="script.js"></script>
+</body>
+</html>

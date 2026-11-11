@@ -1,0 +1,71 @@
+<!-- isso aqui avisa pro navegador que o arquivo e html5, a versao atual do html -->
+<!DOCTYPE html>
+<!-- tag que abre a pagina toda, o lang fala que o site ta em portugues do brasil, ajuda o tradutor e leitor de tela -->
+<html lang="pt-BR">
+<!-- o head guarda as configuracoes da pagina, nada aqui aparece na tela -->
+<head>
+    <!-- charset utf-8 deixa os acentos e o ç aparecerem certinho -->
+    <meta charset="UTF-8">
+    <!-- faz o site se ajustar no tamanho da tela do celular, sem isso fica tudo minusculo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- o nome que aparece na aba do navegador -->
+    <title>Início</title>
+    <!-- puxa o arquivo de css, que e onde fica a parte visual, cor, tamanho, posicao -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- o body e tudo que aparece na tela de verdade -->
+<body>
+
+    <!-- cabecalho do site, a parte de cima, a classe cabecalho e pro css estilizar -->
+    <header class="cabecalho">
+        <!-- titulo principal, o maior da pagina, ainda ta com nome provisorio -->
+        <h1>Nome do site</h1>
+        <!-- nav e a area de navegacao, o menu, ele e igual em todas as paginas -->
+        <nav class="menu">
+            <!-- ul e uma lista sem numero, cada li e um item do menu -->
+            <ul>
+                <!-- a e um link, o href fala pra qual pagina ele leva -->
+                <li><a href="index.html">Início</a></li>
+                <li><a href="form.html">Calcular dieta</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main e o conteudo principal da pagina, a classe container o css usa pra centralizar e limitar a largura -->
+    <main class="container">
+        <!-- section e um bloco de conteudo, a classe secao deixa todos os blocos com o mesmo visual -->
+        <section class="secao">
+            <!-- h2 e um subtitulo, menor que o h1 -->
+            <h2>Descubra quantas calorias você precisa por dia</h2>
+            <!-- p e um paragrafo de texto normal -->
+            <p>Informe seus dados e receba uma estimativa de calorias de acordo com sua rotina e seu objetivo.</p>
+            <!-- link pro formulario, a classe botao faz ele parecer um botao em vez de link azul -->
+            <a href="form.html" class="botao">Calcular minha dieta</a>
+        </section>
+
+        <!-- bloco explicando como o calculo funciona -->
+        <section class="secao">
+            <h2>Como funciona</h2>
+            <!-- img coloca uma imagem, src e o caminho dela dentro da pasta imagens, alt e o texto que aparece se a imagem nao carregar e que o leitor de tela le -->
+            <img src="imagens/exemplo.jpg" alt="Prato com refeição equilibrada" class="imagem">
+            <p>O cálculo usa seu peso, altura, idade, sexo e nível de atividade física para estimar seu gasto diário de energia.</p>
+            <p>Depois, ajusta o valor conforme o objetivo escolhido: perder peso, manter ou ganhar massa.</p>
+        </section>
+
+        <!-- bloco de aviso, deixando claro que nao substitui nutricionista -->
+        <section class="secao">
+            <h2>Importante</h2>
+            <p>O resultado é só uma estimativa. Para um plano alimentar de verdade, procure um nutricionista.</p>
+        </section>
+    </main>
+
+    <!-- rodape, a parte de baixo do site, igual em todas as paginas -->
+    <footer class="rodape">
+        <p>Trabalho de Programação Web — PUCPR</p>
+    </footer>
+
+    <!-- puxa o arquivo javascript, fica no final pra pagina carregar primeiro e o js rodar depois -->
+    <script src="script.js"></script>
+</body>
+</html>

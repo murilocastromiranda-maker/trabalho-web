@@ -1,0 +1,149 @@
+<!-- avisa pro navegador que e html5 -->
+<!DOCTYPE html>
+<!-- abre a pagina, lang em portugues do brasil -->
+<html lang="pt-BR">
+<!-- configuracoes da pagina, nao aparece na tela -->
+<head>
+    <!-- deixa os acentos funcionando -->
+    <meta charset="UTF-8">
+    <!-- ajusta o site pro celular -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- nome da aba -->
+    <title>Cálculo de dieta</title>
+    <!-- puxa o css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- tudo que aparece na tela -->
+<body>
+
+    <!-- cabecalho com o mesmo menu das outras paginas -->
+    <header class="cabecalho">
+        <h1>Nome do site</h1>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="form.html">Calcular dieta</a></li>
+                <li><a href="about.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- conteudo principal -->
+    <main class="container">
+        <section class="secao">
+            <h2>Calcule sua dieta</h2>
+            <p>Preencha seus dados para ver uma estimativa de calorias por dia.</p>
+
+            <!-- o form e o formulario, o id formDieta e pro js achar ele e validar, action fala pra qual pagina os dados vao quando clicar em calcular, method get manda os dados pela url, tipo formAction.html?nome=pedro&idade=19 -->
+            <form id="formDieta" class="formulario" action="formAction.html" method="GET">
+
+                <!-- fieldset junta campos parecidos numa caixinha, a classe grupo e pro css -->
+                <fieldset class="grupo">
+                    <!-- legend e o titulo da caixinha -->
+                    <legend>Dados pessoais</legend>
+
+                    <!-- cada div campo e um campo do form, a classe deixa todos alinhados igual -->
+                    <div class="campo">
+                        <!-- label e o texto do campo, o for liga ele ao input com o mesmo id, clicar no texto ja seleciona o campo -->
+                        <label for="nome">Nome</label>
+                        <!-- input de texto, o id e pro label e pro js, o name e o nome que vai na url quando enviar, sem name o dado nao vai -->
+                        <input type="text" id="nome" name="nome">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <!-- type email faz o navegador conferir se tem cara de email, com @ e tudo -->
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="campo">
+                        <label for="idade">Idade</label>
+                        <!-- type number so deixa digitar numero, no celular abre o teclado numerico -->
+                        <input type="number" id="idade" name="idade">
+                    </div>
+
+                    <div class="campo">
+                        <p>Sexo</p>
+                        <!-- radio e aquela bolinha de escolher so uma opcao, os dois tem o mesmo name sexo, por isso marcar um desmarca o outro, o value e o que vai na url -->
+                        <input type="radio" id="masculino" name="sexo" value="masculino">
+                        <label for="masculino">Masculino</label>
+                        <input type="radio" id="feminino" name="sexo" value="feminino">
+                        <label for="feminino">Feminino</label>
+                    </div>
+                </fieldset>
+
+                <!-- segunda caixinha, so as medidas do corpo -->
+                <fieldset class="grupo">
+                    <legend>Medidas</legend>
+
+                    <div class="campo">
+                        <label for="peso">Peso (kg)</label>
+                        <!-- step 0,1 deixa colocar numero quebrado tipo 72,5 -->
+                        <input type="number" id="peso" name="peso" step="0.1">
+                    </div>
+
+                    <div class="campo">
+                        <label for="altura">Altura (cm)</label>
+                        <input type="number" id="altura" name="altura">
+                    </div>
+                </fieldset>
+
+                <!-- terceira caixinha, rotina e objetivo da pessoa -->
+                <fieldset class="grupo">
+                    <legend>Rotina e objetivo</legend>
+
+                    <div class="campo">
+                        <label for="atividade">Nível de atividade física</label>
+                        <!-- select e aquela lista que abre pra baixo, cada option e uma escolha -->
+                        <select id="atividade" name="atividade">
+                            <!-- opcao vazia de proposito, se a pessoa nao escolher nada o js pega e avisa -->
+                            <option value="">Selecione</option>
+                            <!-- o value e o que vai pra url, o texto do meio e o que a pessoa ve -->
+                            <option value="sedentario">Sedentário</option>
+                            <option value="leve">Leve (1 a 3 dias por semana)</option>
+                            <option value="moderado">Moderado (3 a 5 dias por semana)</option>
+                            <option value="intenso">Intenso (6 a 7 dias por semana)</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="objetivo">Objetivo</label>
+                        <select id="objetivo" name="objetivo">
+                            <option value="">Selecione</option>
+                            <option value="perder">Perder peso</option>
+                            <option value="manter">Manter peso</option>
+                            <option value="ganhar">Ganhar massa</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="observacoes">Observações</label>
+                        <!-- textarea e uma caixa de texto grande, rows 4 deixa ela com altura de 4 linhas -->
+                        <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+                    </div>
+
+                    <div class="campo">
+                        <!-- checkbox e o quadradinho de marcar, aqui a pessoa confirma que sabe que e so estimativa -->
+                        <input type="checkbox" id="termos" name="termos" value="aceito">
+                        <label for="termos">Entendo que o resultado é só uma estimativa</label>
+                    </div>
+                </fieldset>
+
+                <!-- botao submit envia o form pra pagina do action -->
+                <button type="submit" class="botao">Calcular</button>
+                <!-- botao reset apaga tudo que foi preenchido -->
+                <button type="reset" class="botao">Limpar</button>
+
+            </form>
+        </section>
+    </main>
+
+    <!-- rodape igual das outras paginas -->
+    <footer class="rodape">
+        <p>Trabalho de Programação Web — PUCPR</p>
+    </footer>
+
+    <!-- puxa o js, que vai validar os campos antes de enviar -->
+    <script src="script.js"></script>
+</body>
+</html>
