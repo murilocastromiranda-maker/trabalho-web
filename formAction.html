@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div id="loading">
+        <span class="carregando"></span>
+    </div>
     <header class="cabecalho">
         <h1>Web kcalculator</h1>
         <nav class="menu">
@@ -26,6 +28,7 @@
             <h3>Dados informados</h3>
             <div id="dadosRecebidos" class="resultado">
                 <!-- o JS preenche aqui com os dados que vieram do form -->
+
             </div>
         </section>
 
@@ -33,16 +36,16 @@
             <h3>Estimativa de calorias</h3>
             <div id="resultado" class="resultado">
                 <!-- o JS mostra o cálculo aqui -->
+                 
             </div>
         </section>
 
-        <a href="form.html" class="botao">Calcular de novo</a>
+        <a href="form.html" id="calcularNovamente" class="botao">Calcular de novo</a>
     </main>
 
     <footer class="rodape">
         <p>Trabalho de Programação Web — PUCPR</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
